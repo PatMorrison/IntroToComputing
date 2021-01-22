@@ -11,7 +11,7 @@ activities = {"Sunny":"play", "Rainy":"watching TV", "Cloudy":"walk"} #3 A dict 
 print(type(activities))
 print(activities)
 
-activities.update({"Snowy":"ski"})
+activities.update({"snowy":"ski"})
 print(activities)
 
 x=90 #Student's Numerical Grade
