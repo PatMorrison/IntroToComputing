@@ -7,7 +7,7 @@ nums = list(range(30,61,3))
 print(type(nums))
 print(nums)
 
-activities = {"Sunny":"play", "Rainy":"watching TV", "Cloudy":"walk"} #3 A dict of activities
+activities = {"Sunny":"play", "Rainy":"watching TV", "Cloudy":"walk"}
 print(type(activities))
 print(activities)
 
