@@ -1,0 +1,26 @@
+
+FavoriteColors = ["blue","green","yellow"]
+print(type(FavoriteColors))
+print(FavoriteColors)
+
+nums = list(range(30,61,3)) 
+print(type(nums))
+print(nums)
+
+activities = {"Sunny":"play", "Rainy":"watching TV", "Cloudy":"walk"} #3 A dict of activities
+print(type(activities))
+print(activities)
+
+activities.update({"Snowy":"ski"})
+print(activities)
+
+x=90 #Student's Numerical Grade
+print("LETTER GRADE:")
+if x>=90:
+    print("A")
+elif 90>x>=80:
+      print("B")
+elif 80>x>=70:
+      print("C")
+elif x<70:
+      print("F")
