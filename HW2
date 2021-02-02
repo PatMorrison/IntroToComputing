@@ -1,0 +1,33 @@
+FavoriteColors = ["blue","green","yellow"]
+print(FavoriteColors[0])
+print(FavoriteColors[1])
+print(FavoriteColors[2])
+
+n = 0
+for n in range(0,20):
+    if n<10:
+        print(n)
+    if n>=10: 
+        break
+
+n=0
+while n>=0:
+    n=n+1
+    if n<10:
+        print(n)
+    if n>=10:
+        break
+
+n=0
+while n<=10:
+    n=n+1
+    if n<=10:
+        print(n)
+    if n>10:
+        print("n is greater than 10")
+
+sum = 0
+for n in range(0,31):
+    sum = sum + n
+    if n ==30:
+        print(sum)
