@@ -1,0 +1,33 @@
+marks={'Andy':88,'Amy':66,'James':90,'Jules':55,'Arthur':77}
+print(marks) 
+
+for student, grade in marks.items():
+        print(student,'scored', grade)
+        
+values=marks.values()
+max_value=max(values)
+min_value=min(values)
+mean_value=sum(values)/len(values)
+print('mean is', mean_value)
+print('max is', max_value)
+print('min is', min_value)
+
+for student in marks:
+    if student >= 'J':
+        break
+    else:
+        print(student)
+
+for student in marks:
+    if student >='J':
+        pass
+    else:
+        print(student)
+
+def student_marks(name):
+    for student in marks:
+        if student==name:
+            print("Student scored:", marks[student])
+            break
+    else:
+        print('No student with that name found')
