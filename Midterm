@@ -1,0 +1,37 @@
+rnum=[2,4,6,8,4,5,2,1,9,0,4,6,7,4,3,2,1,9,10,3,7,9,6,0,1,3,5,6,7,8,9,10,2,3,6,8,9,10,6,7,4,3]
+num_count={}
+for num in rnum:
+    if num in num_count:
+        num_count[num] +=1
+    else:
+        num_count[num] =1
+for num, freq in num_count.items():
+    print(num, 'occurs', freq,'times in the set.')
+keys=num_count.keys()
+vals=num_count.values()
+plt.bar(keys,vals)
+import json
+y = json.dumps(num_count)
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+va_df=pd.read_csv('ViewingActivity1.csv')
+va2_df=pd.read_csv('ViewingActivity2.csv')
+
+y=pd.unique(va_df['Device Type'])
+device_count= va_df.groupby('Device Type')['Profile Name'].count()
+x=('iPhone 7','iPhone XS','Chrome PC','X1 4k','X1','X1','Chromecast','Xbox 360','Xbox One','Chrome Mac','Roku',
+'Sony M3','Sony M2','iPad Air 2','iPhone 5S')
+plt.figure(figsize=(15,5))
+plt.bar(x,device_count)
+plt.show()
+print(device_count)
+
+va2_df['Duration'] = pd.to_timedelta(va2_df['Duration'])
+Profile_dur= va2_df.groupby('Profile Name')['Duration'].sum()
+names=('Jack','Pat','Char','George','Stephanie')
+plt.pie(Profile_dur)
+plt.legend(names)
+plt.show
+print(Profile_dur)
