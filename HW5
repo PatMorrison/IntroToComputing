@@ -1,0 +1,66 @@
+#My guess is that it will print '5:30'
+class Clock():
+    def __init__(self,time):
+        self.time=time
+    def print_time(self):
+        time='6:30'
+        print(self.time)
+clock=Clock('5:30')
+clock.print_time()
+#Now that I know the code prints 5:30, it does this because 'clock' is the only class defined.
+
+#My guess is that it will print '10:30'
+class Clock():
+    def __init__(self,time):
+        self.time=time
+    def print_time(self,time):
+        print(time)
+clock=Clock('5:30')
+clock.print_time('10:30')
+#Giving the parameter and the object the same name can be confusing, if it was print(self.time) 
+#instead of print(time) it would have printer '5:30'
+
+class Clock(): #I guess this code will print '5:30' '10:30'
+    def __init__(self,time):
+        self.time=time
+    def print_time(self):
+        print(self.time)
+
+class Clock1(Clock):
+    pass
+Boston_clock=Clock('5:30')
+Paris_clock=Clock1('10:30')
+
+Boston_clock.print_time()
+Paris_clock.print_time()
+#This prints this because boston clock and paris clock are two different objects and are even two different classes
+
+class Queue:
+    def __init__(self):
+        self.items=[]
+    def display(self):
+        print(self.items)
+    def insert(self, item):
+          self.items.insert(0,item)
+    def remove(self):
+        if self.items==[]:
+            print('The queue is empty')
+        else:
+            return self.items.pop()
+    def count(self):
+        return len(self.items)
+    def reset(self):
+        self.items ==[]
+
+q=Queue()
+
+q.reset()
+q.insert('Pat')
+q.insert('Elliot')
+q.display()
+q.remove()
+q.insert('Meg')
+q.display()
+q.remove()
+q.remove()
+q.remove()
